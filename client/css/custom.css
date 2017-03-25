@@ -1,0 +1,6 @@
+html, body, #map {
+    height: 100%;
+    width: 100%;
+    font-family: "PT Sans", Corbel, sans-serif;
+    color: #1e87c7;
+}

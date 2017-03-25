@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Downtown Raleigh Hotspots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="./css/custom.css">
+    <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet-src.js"></script>
+    <script type="text/javascript" src=".js/modal.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0/esri-leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.1.0/esri-leaflet-geocoder.css">
+    <script src="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.1.0/esri-leaflet-geocoder.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="./data/dtr_points_geojson.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/leaflet.icon.glyph@latest"></script>
+    <style>
+      body { margin:0; padding:0; }
+      #map { position: fixed; top:50px; bottom:0; right:0; left:0; }
+      .navbar {
+        text-align: center;
+      }
+      .nav {
+        display: inline-block;
+      }
+      .navbar-brand {
+        color: #1e87c7;
+      }
+  
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-fixed-top navbar-inverse bg-primary ">
+        <a class="navbar-brand" href="index.html" style="color:#1e87c7">DTR Guide</a>
+        <!-- Navbar content -->
+      </nav>
+
+      <!--Creates basemap dropdown-->
+      <div id="map"></div>
+      <script src="./socket.io/socket.io.js"></script>
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/angular.min.js"></script>
+      <script src="./js/app.js"></script>
+    </div>  
+  </body>
+</html>

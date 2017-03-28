@@ -1,5 +1,5 @@
 
-var map = L.map('map').setView([35.7787, -78.6397], 15);
+var map = L.map('map').setView([35.7787, -78.6397], 14.50);
 map.options.minZoom = 14;
 map.options.maxZoom = 18;
 map.setMaxBounds([[35.82389, -78.40], [35.704567, -78.80]]);

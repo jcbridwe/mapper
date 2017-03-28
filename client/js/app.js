@@ -87,18 +87,11 @@ var points = L.geoJson(dtr_points, {
          if(feature.properties.Type == "occult shop") {
             layer.setIcon(occult);
          };
-         
-         
       }    
 }).addTo(map);
 
-L.control.zoom({
-      position:'bottomright'
-     }).addTo(map);
 
-
-
-L.control.layers(points).addTo(map);
+L.control.layers().addTo(map);
 
 
 

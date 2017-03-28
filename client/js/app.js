@@ -50,7 +50,7 @@ var culture = L.icon({
 });
 
 var cafe = L.icon({
-		iconUrl: 'http://www.iconsdb.com/icons/preview/barbie-pink/coffee-7-xxl.png',
+		iconUrl: 'http://www.iconsdb.com/icons/preview/caribbean-blue/cafe-xxl.png',
 		iconSize: [20, 20],
 		iconAnchor: [16, 37],
 		popupAnchor: [0, -28]

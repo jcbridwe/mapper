@@ -8,8 +8,6 @@ var layers = L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y
 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>contributors'
 }).addTo(map);
 
-
-
 var bar = L.icon({
 // 		iconUrl: 'https://image.flaticon.com/icons/png/512/33/33309.png',
         iconUrl: 'http://www.free-icons-download.net/images/red-cocktail-icon-56567.png',
@@ -50,7 +48,7 @@ var culture = L.icon({
 });
 
 var cafe = L.icon({
-		iconUrl: 'http://www.iconsdb.com/icons/preview/caribbean-blue/cafe-xxl.png',
+		iconUrl: 'http://www.freeiconspng.com/uploads/coffee-icon-png-29.png',
 		iconSize: [20, 20],
 		iconAnchor: [16, 37],
 		popupAnchor: [0, -28]
@@ -68,6 +66,7 @@ var types = ['beer','bar','restaurant','music','culture','cafe', 'occult shop'];
 
 var layerControl = L.control.layers().addTo(map);
 
+
 types.forEach(function(type) {
     var layer = L.geoJson(dtr_points, {
         filter: function(feature, layer) {
@@ -75,37 +74,38 @@ types.forEach(function(type) {
         }, 
         onEachFeature: function (feature, layer) {
             var link_url = "<a href='" + feature.properties.Link + "' target='_blank'>" + feature.properties.Name + "</a>";
-            console.log(link_url);
             layer.bindPopup(link_url);
             // layer.bindPopup("<a href=" + feature.properties.Link + ">" + feature.properties.Name + "</a>)<br>" + "<img style='width: 100%' src='http://www.slimsraleigh.com/images/logo/logo.png'>";
             
-             if(feature.properties.Type == "beer") {
+            if(feature.properties.Type == "beer") {
                 layer.setIcon(beer);
-             };
-             if(feature.properties.Type == "bar") {
+            };
+            if(feature.properties.Type == "bar") {
                 layer.setIcon(bar);
-             };
-             if(feature.properties.Type == "restaurant") {
+            };
+            if(feature.properties.Type == "restaurant") {
                 layer.setIcon(restaurant);
-             };
-             if(feature.properties.Type == "music") {
+            };
+            if(feature.properties.Type == "music") {
                 layer.setIcon(music);
-             };
-             if(feature.properties.Type == "culture") {
+            };
+            if(feature.properties.Type == "culture") {
                 layer.setIcon(culture);
-             };
-             if(feature.properties.Type == "cafe") {
+            };
+            if(feature.properties.Type == "cafe") {
                 layer.setIcon(cafe);
-             };
-             if(feature.properties.Type == "occult shop") {
+            };
+            if(feature.properties.Type == "occult shop") {
                 layer.setIcon(occult);
-             };
-          }    
+            };
+        }    
     }).addTo(map);
     layerControl.addOverlay(layer, type);
 });
 
-
-
-
-
+var locator = L.control.locate({
+    position: 'topleft',
+    strings: {
+        title: "Show me where I am, yo!"
+    }
+}).addTo(map);

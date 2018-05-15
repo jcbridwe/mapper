@@ -4,3 +4,10 @@ html, body, #map {
     font-family: "PT Sans", Corbel, sans-serif;
     color: #1e87c7;
 }
+
+.leaflet-control-locate a {
+    text-align: left;
+}
+.leaflet-control-locate a:hover {
+    text-align: left;
+}

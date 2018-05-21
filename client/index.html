@@ -11,22 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet.locatecontrol/0.60.0/L.Control.Locate.mapbox.min.css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="./css/custom.css">
-    <style>
-      body { margin:0; padding:0; }
-      #map { position: fixed; top:50px; bottom:0; right:0; left:0; }
-      .navbar {
-        text-align: center;
-        margin: auto;
-      }
-      .nav {
-        display: inline-block;
-      }
-      .navbar-brand {
-        color: #1e87c7;
-      }
-       
-  </style>
-  </head>
+    </head>
   <body>
     <div class="container">
       <!--Simple navbar-->
@@ -36,6 +21,8 @@
 
       <!--Creates application and basemap with all necessary API's and components-->
       <div id="map"></div>
+      
+      <!-- JS, geoJson, and API's -->
       <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet-src.js"></script>
       <script src="https://cdn.jsdelivr.net/leaflet.locatecontrol/0.60.0/L.Control.Locate.min.js" charset="utf-8"></script>
       <script src="https://unpkg.com/leaflet.icon.glyph@latest"></script>

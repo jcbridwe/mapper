@@ -1,9 +1,30 @@
+
 html, body, #map {
     height: 100%;
     width: 100%;
     font-family: "PT Sans", Corbel, sans-serif;
     color: #1e87c7;
 }
+
+body { margin:0; padding:0; }
+  #map { 
+      position: fixed; 
+      top:50px; 
+      bottom:0; 
+      right:0; 
+      left:0; 
+      }
+      
+  .navbar {
+    text-align: center;
+    margin: auto;
+  }
+  .nav {
+    display: inline-block;
+  }
+  .navbar-brand {
+    color: #1e87c7;
+  }
 
 .leaflet-control-locate a {
     text-align: left;
